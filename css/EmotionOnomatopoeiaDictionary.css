@@ -1,0 +1,31 @@
+.angry{
+  background-color: red;
+}
+
+.happy{
+  background-color: yellow;
+}
+
+.bad{
+  background-color: black;
+}
+
+.sad{
+  background-color: blue;
+}
+
+.surprised{
+  background-color: orange;
+}
+
+.fearful{
+  background-color: purple;
+}
+
+.disgusted{
+  background-color: brown;
+}
+
+.onomatope-block{
+  background-color: white;
+}
