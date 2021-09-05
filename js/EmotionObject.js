@@ -1,9 +1,10 @@
 class EmotionObject{
-  constructor(emotion, description, color, onomatopoeia){
+  constructor(emotion, description, color, onomatopoeia, icon){
     this.emotion = emotion;
     this.description = description;
     this.color = color;
     this.onomatopoeia = onomatopoeia;
+    this.icon = icon
   }
 
   getOnomatopoeiaWords(){
@@ -12,17 +13,17 @@ class EmotionObject{
 
     return wordArray;
   }
-  //コンテナのHTMLを文字列を返します。このコンテナの背景は感情の色で、コンテナの上部には、感情と感情の説明が表示されています。次にこの感情の各擬音語とその定義、画像を含んだカードが表示されます。
+
   getHtmlContainerString(){
     let containerSection =
     `
   <div style="background-color:${this.color};" class="d-flex justify-content-center align-items-center" id="sec${this.emotion}">
     <div class="content">
       <div class="emotion d-flex justify-content-center">
-        <a href="#top"><p>${this.emotion}</p></a>
+        <a href="#top"><h3>${this.emotion}</h3></a>
       </div>
       <div class="describe d-flex justify-content-around">
-        <p>${this.description}</p>
+        <h3>${this.description}</h3>
       </div>
       <div class="d-flex justify-content-between flex-wrap content onomatope-target">
     `

@@ -14,12 +14,12 @@ function emotionOnomatopoeia(targetDiv, emotions){
     <div style="background-color:${emotionObj.color};" class="emotion-block col-3 ml-4 mb-2">
       <a href="#sec${emotionObj.emotion}">
         <div class="d-flex justify-content-center align-items-center">
-          <p>${emotionObj.emotion}</p>
-        </div>
-        <div class="emotion-img d-flex justify-content-center align-items-center">
-          <img src="" alt="img">
+          <h3>${emotionObj.emotion}</h3>
         </div>
       </a>
+      <div class="emotion-img d-flex justify-content-center align-items-center">
+        ${emotionObj.icon}
+      </div>
     </div>
 
     `;
@@ -36,13 +36,13 @@ function emotionOnomatopoeia(targetDiv, emotions){
 
 document.addEventListener("DOMContentLoaded", () => {
   const emotions = [
-      new EmotionObject("angry", "feeling or showing strong annoyance, displeasure, or hostility; full of anger.", "red", ["bark","grunt", "roar","whack","smack","hiss"]),
-      new EmotionObject("happy", "feeling or showing pleasure or contentment.", "yellow", ["bling","chatter","chant","giggle"]),
-      new EmotionObject("bad", "not such as to be hoped for or desired; unpleasant or unwelcome.", "beige", ["ahem","clatter","clunk"]),
-      new EmotionObject("sad", "feeling or showing sorrow; unhappy.", "grey", ["bawl","whine","waah"]),
-      new EmotionObject("surprised", "to feel mild astonishment or shock.", "purple", ["boom","honk","zing"]),
-      new EmotionObject("fearful", "feeling afraid; showing fear or anxiety.", "green", ["buzz","caw","crawl"]),
-      new EmotionObject("disgusted", "feeling or showing strong annoyance, displeasure, or hostility; full of anger.", "orange", ["flick","gargle","oink"])
+      new EmotionObject("angry", "feeling or showing strong annoyance, displeasure, or hostility; full of anger.", "red", ["bark","grunt", "roar","whack","smack","hiss"], '<i class="fas fa-angry"></i>'),
+      new EmotionObject("happy", "feeling or showing pleasure or contentment.", "yellow", ["bling","chatter","chant","giggle"], '<i class="fas fa-smile-wink"></i>'),
+      new EmotionObject("bad", "not such as to be hoped for or desired; unpleasant or unwelcome.", "beige", ["ahem","clatter","clunk"], '<i class="fas fa-flushed"></i>'),
+      new EmotionObject("sad", "feeling or showing sorrow; unhappy.", "grey", ["bawl","whine","waah"], '<i class="fas fa-sad-tear"></i>'),
+      new EmotionObject("surprised", "to feel mild astonishment or shock.", "purple", ["boom","honk","zing"], '<i class="fas fa-surprise"></i>'),
+      new EmotionObject("fearful", "feeling afraid; showing fear or anxiety.", "green", ["buzz","caw","crawl"], '<i class="fas fa-tired"></i>'),
+      new EmotionObject("disgusted", "feeling or showing strong annoyance, displeasure, or hostility; full of anger.", "orange", ["flick","gargle","oink"], '<i class="fas fa-mask"></i>')
   ];
 
   emotionOnomatopoeia(document.getElementById("target"), emotions);
