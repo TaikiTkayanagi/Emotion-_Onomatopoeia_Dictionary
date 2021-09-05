@@ -1,31 +1,20 @@
-.angry{
-  background-color: red;
-}
-
-.happy{
-  background-color: yellow;
-}
-
-.bad{
-  background-color: black;
-}
-
-.sad{
-  background-color: blue;
-}
-
-.surprised{
-  background-color: orange;
-}
-
-.fearful{
-  background-color: purple;
-}
-
-.disgusted{
-  background-color: brown;
+.onomatopoeia-container{
+  height: 100%;
+  width: 100%;
 }
 
 .onomatope-block{
   background-color: white;
+  height: 100%;
+  width: 40%;
+}
+
+.onomatopoeia-img{
+  height: 30%;
+  width: 40%;
+}
+
+.onomatopoeia-img-block{
+  height: 70%;
+  width: 100%;
 }

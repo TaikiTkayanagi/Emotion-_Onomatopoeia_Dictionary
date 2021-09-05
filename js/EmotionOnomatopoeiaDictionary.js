@@ -1,17 +1,17 @@
 function emotionOnomatopoeia(targetDiv, emotions){
   let categories =
   `
-  <div class="category">
-    <div class="title">
+  <div class="category bg-light">
+    <div class="title" id="top">
       <h1>Category</h1>
     </div>
-    <div class="category-content d-flex justify-content-center flex-wrap">
-    <div class="section d-flex row col-8 bg-light">
+    <div class="category-content d-flex justify-content-center">
+      <div class="section d-flex row col-8 flex-wrap">
   `
   emotions.forEach(emotionObj => {
     categories +=
     `
-    <div style="background-color:${emotionObj.color};" class="emotion-block container col-3 mr-2">
+    <div style="background-color:${emotionObj.color};" class="emotion-block col-3 ml-4 mb-2">
       <a href="#sec${emotionObj.emotion}">
         <div class="d-flex justify-content-center align-items-center">
           <p>${emotionObj.emotion}</p>

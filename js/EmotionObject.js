@@ -16,10 +16,10 @@ class EmotionObject{
   getHtmlContainerString(){
     let containerSection =
     `
-  <div style="background-color:${this.color};" class="d-flex justify-content-center align-items-center container" id="sec${this.emotion}">
+  <div style="background-color:${this.color};" class="d-flex justify-content-center align-items-center" id="sec${this.emotion}">
     <div class="content">
       <div class="emotion d-flex justify-content-center">
-        <p>${this.emotion}</p>
+        <a href="#top"><p>${this.emotion}</p></a>
       </div>
       <div class="describe d-flex justify-content-around">
         <p>${this.description}</p>
@@ -30,14 +30,14 @@ class EmotionObject{
     wordArray.forEach(word => {
       containerSection +=
       `
-        <div class="container col-8 pr-5 pb-5">
-          <div class="d-flex justify-content-between onomatope-block">
+        <div class="col-4 pl-5 pb-5 onomatopoeia-container">
+          <div class="onomatope-block">
             <div>
-              <p>${word.word}</p>
+              <h3>${word.word}</h3>
               <p>${word.defintion}</p>
             </div>
-            <div class="d-flex align-items-center">
-              <img src="${word.pictureUrl}" alt="img">
+            <div class="d-flex justify-content-end onomatopoeia-img-block">
+              <img src="${word.pictureUrl}" alt="img" class="onomatopoeia-img">
             </div>
           </div>
         </div>
